@@ -27,7 +27,7 @@ def test_neural_net_seq_output():
 
     net = neuralnet.Network([68,34,1])
     net.SGD(training_input,300,10,1)
-    output = net.output(neg_pairs)
+    output = net.output(neg_input)
     assert output[0][0] == "CCGCCCATGTCTACCAG"
 
 def test_8_3_8():
