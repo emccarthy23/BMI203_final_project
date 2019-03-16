@@ -19,7 +19,7 @@ def test_reverse_complement():
 
 def test_neural_net_seq_output():
     pos_pairs = io.read_sequences('data/rap1-lieb-positives.txt')
-    pos_pairs = io.reverse_complement(pairs)
+    pos_pairs = io.reverse_complement(pos_pairs)
     pos_input = io.convert_to_numeric(pos_pairs)
     neg_pairs = np.load("neg_sequences.npy")
     neg_input = io.convert_to_numeric(neg_pairs)
@@ -40,6 +40,7 @@ def test_8_3_8():
                 [np.array([[0,0,0,0,0,0,1,0]]).T,np.array([[0,0,0,0,0,0,1,0]]).T],
                 [np.array([[0,0,0,0,0,0,0,1]]).T,np.array([[0,0,0,0,0,0,0,1]]).T]]
     unsorted_test = test_data
-    net_test.SGD(test_data,300,1,1)
-    output = net_test.evaluate_8_3_8(unsorted_test)
+    net = neuralnet.Network([8,3,8])
+    net.SGD(test_data,300,1,1)
+    output = net.evaluate_8_3_8(unsorted_test)
     assert output[0][0] ==[1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
