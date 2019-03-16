@@ -1,8 +1,8 @@
-from .io import read_sequences, reverse_complement, read_neg_sequences, Diff, convert_to_numeric
-import neural_net
+from BMI203_HW3 import io
+from BMI203_HW3 import neural_net
 import numpy as np
 import random
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 import time
 
 #Not testing write_alignment
