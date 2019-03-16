@@ -39,7 +39,14 @@ def test_8_3_8():
                 [np.array([[0,0,0,0,0,1,0,0]]).T,np.array([[0,0,0,0,0,1,0,0]]).T],
                 [np.array([[0,0,0,0,0,0,1,0]]).T,np.array([[0,0,0,0,0,0,1,0]]).T],
                 [np.array([[0,0,0,0,0,0,0,1]]).T,np.array([[0,0,0,0,0,0,0,1]]).T]]
-    unsorted_test = test_data
+    unsorted_test = [[np.array([[1,0,0,0,0,0,0,0]]).T,np.array([[1,0,0,0,0,0,0,0]]).T],
+                 [np.array([[0,1,0,0,0,0,0,0]]).T,np.array([[0,1,0,0,0,0,0,0]]).T],
+                [np.array([[0,0,1,0,0,0,0,0]]).T,np.array([[0,0,1,0,0,0,0,0]]).T],
+                [np.array([[0,0,0,1,0,0,0,0]]).T,np.array([[0,0,0,1,0,0,0,0]]).T],
+                [np.array([[0,0,0,0,1,0,0,0]]).T,np.array([[0,0,0,0,1,0,0,0]]).T],
+                [np.array([[0,0,0,0,0,1,0,0]]).T,np.array([[0,0,0,0,0,1,0,0]]).T],
+                [np.array([[0,0,0,0,0,0,1,0]]).T,np.array([[0,0,0,0,0,0,1,0]]).T],
+                [np.array([[0,0,0,0,0,0,0,1]]).T,np.array([[0,0,0,0,0,0,0,1]]).T]]
     net = neuralnet.Network([8,3,8])
     net.SGD(test_data,300,1,1)
     output = net.evaluate_8_3_8(unsorted_test)
