@@ -21,12 +21,8 @@ conda install --yes --file requirements.txt
 ```
 
 to install all the dependencies in `requirements.txt`. Then the package's
-main function (located in `BMI203_final_project/__main__.py`) can be run as
-follows
-
-```
-python -m BMI203_final_project -P data test.txt
-```
+main function is a module to create a neural network. See the jupyter notebook
+to see an example of calling this function.
 
 ## testing
 
