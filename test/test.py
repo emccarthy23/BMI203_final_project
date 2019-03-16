@@ -1,5 +1,5 @@
-from BMI203_HW3 import io
-from BMI203_HW3 import neural_net
+from BMI203_final_project import io
+from BMI203_final_project import neural_net
 import numpy as np
 import random
 #import matplotlib.pyplot as plt
